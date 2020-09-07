@@ -1,0 +1,28 @@
+Predictive modeling: targeting offers
+
+You have to build a predictive model for targeting offers to consumers, and conduct some model performance analytics on the result.
+
+A financial company keeps records on individuals who had been previously targeted with a direct marketing offer for an identity theft protection (risk management) subscription including their household income, the average amount sold, the frequency of their transactions, and whether or not they bought a subscription in the most recent campaign. This company would like to use data mining techniques to build customer profile models. The data contains the following fields:
+
+income: customer income
+firstDate: date of first sale
+lastDate: date of last sale
+amount: average amount sold to this customer over all periods (including zeros)
+freqSales: frequency of transactions
+saleSizeCode: code of sale size
+starCustomer: indicator if it is a star customer
+lastSale: amount of last sale
+avrSale: amount of average sale
+class: whether or not customer bought a subscription
+
+Each record corresponds to a customer and contains the customer’s attributes above. The “class” attribute indicates whether or not that customer bought a subscription in the most recent campaign.
+
+We will use historical data on past customer responses (contained in the file directMarketing.csv) in order to build a classification model. The model can then be applied to a new set of prospective customers whom the organization may contact in a direct marketing campaign. Rather than conducting a mass marketing campaign targeting all potential prospects, the organization wishes to target only a subset of prospects who are most likely to respond positively to this offer (More generally, those who will give the organization the highest expected profit).
+
+Using python and the package scikit-learn (http://scikit-learn.org/stable/documentation.html) build predictive models using CART (decision trees), support vector machine, and logistic regression to evaluate whether or not the customer will buy a subscription in this campaign. You may need to pre-process the data. Logistic regression becomes the benchmark that you will use to compare the rest of algorithms.
+
+You must randomly split your data set using 70% and 30% of the observations for the training and test data set respectively. Your report should answer these questions using only the results of the test dataset:
+1) Compare the different models explored using the test error rate (percent incorrectly classified), the area under the ROC curve and the confusion matrix against the benchmark (logistic regression).
+2) Use matplotlib to plot the ROC and the precision-recall curves for your models. Discuss and compare the performance of each model according to these curves against the benchmark (logistic regression).
+
+You should submit two UNCOMPRESSED files: a report and a Python program organized by questions. Please do not copy and paste large parts of the Python program as part of the solutions. Create your tables with the output of your program and EXPLAIN the results. You can submit a report as a Jupyter notebook saved as an HTML or pdf file, and you should also submit the Python code file as an independent file.
